@@ -4,11 +4,15 @@ Look mate I'm bloody tired of whichever asshole keeps joining and leaving voice 
 ## Installation
 Download the source code from the [latest release](https://github.com/mtsev/vc-tracker/releases/latest).
 
-This bot requires Node.js 12.x or higher to run.
+This bot requires Node.js 12.x or higher to run. You can use a process manager such as tmux to keep the bot running in the background.
 ```sh
+$ tmux new -s vc-tracker
 $ npm install
 $ npm start
+
 ```
+
+Logs will be saved to `vc-tracker.log`
 
 On Discord, the bot requires permissions integer `68608` and privileged gateway intents `presence intent`.
 
@@ -21,6 +25,5 @@ Make a file `config.json` with the following content:
     "token": "bot_token"
 }
 ```
-
-`bot_prefix` is a string to precede bot commands
-`bot_token` is the Discord bot token. Get this from the [Discord Developer Portal](https://discordapp.com/developers/applications/)
+* `bot_prefix` is a string to precede bot commands
+* `bot_token` is the Discord bot token. Get this from the [Discord Developer Portal](https://discordapp.com/developers/applications/)
